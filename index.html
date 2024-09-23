@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="esn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Five</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy UI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'bg-navbar': '#F9F7F3',
+            'light-text': 'rgba(17, 17, 17, 0.7)',
+             'card-border': 'rgba(17, 17, 17, 0.1)',
+             'bg-card': 'rgb(255, 255, 255)',
+             'btn-bg':'#B4F461',
+             'lighter-text':'rgba(17, 17, 17, 0.7)',
+
+          }
+        }
+      }
+    }
+  </script>
+<style>
+ .lexend-font{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+</style>
+</head>
+<body class="lexend-font">
+    <header class=" bg-bg-navbar pt-5 pb-7 fixed top-0 w-full">
+        <nav class=" flex lg:flex-row flex-col lg:justify-between lg:mx-20 gap-4 items-center ">
+            <a href="blog.html"><button class="btn text-xl font-semibold bg-btn-bg ">Blog</button></a>
+            <div class="flex gap-2"><img src="assets/logo.png" alt=""><h1 class="text-xl font-semibold mt-2">Donate Bangladesh</h1></div>
+            <div class="flex  gap-2 lg:mt-2 "><img class="w-8 h-8" src="assets/coin.png" alt=""><h1 id="total-input-amount" class="text-xl font-medium">5500</h1><p class="text-xl font-medium"> BDT</p></div>
+        </nav>
+    </header>
+    <div  class="text-center space-x-5 lg:mt-40 mt-64"><button id="show-donate-btn" class="btn bg-btn-bg">Donation</button><button 
+     id="show-history-btn" class="btn border border-gray-300 bg-white">History</button></div>
+    <section id="donate-section" class="container w-10/12 mx-auto mt-14 ">
+      <div class="flex  flex-col   gap-7">
+        <div class="flex lg:flex-row flex-col gap-4 p-5 bg-bg-card border border-card-border rounded-2xl ">
+            <div class="lg:w-3/6"><img src="assets/noakhali.png" alt=""></div>
+        <div class="flex flex-col gap-6 lg:w-3/6">
+            <button class="btn w-[10rem]"><img  src="assets/coin.png" alt=""><p id="donation-amount">0</p><span>BDT</span></button>
+            <h1 class="text-xl">Donate for Flood at Noakhali, Bangladesh</h1>
+            <p class="text-sm font-medium text-gray-500"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+            <input id="input-field" class="h-12 p-2  border-2 border-card-border rounded-lg text-xs font-light" type="number" placeholder="write Donation Amount">
+            <button id="donate-now" class="btn bg-btn-bg">Donate Now</button>
+        </div>
+        </div>
+        <div class="flex lg:flex-row flex-col gap-4 p-5 bg-bg-card border border-card-border rounded-2xl">
+            <div class="lg:w-3/6"><img class="lg:h-96 w-full" src="assets/feni.png" alt=""></div>
+        <div class="flex flex-col gap-7 lg:w-3/6">
+            <button class="btn  w-[10rem]"><img src="assets/coin.png" alt=""><p id="donation-amount2">0</p><p>BDT</p></button>
+            <h1 class="text-xl">Donate for Flood Relief in Feni,Bangladesh</h1>
+            <p class="text-sm font-medium text-gray-500"> The recent floods in Feni have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+            <input id="input-field2" class="h-12 p-2 border-2 border-card-border rounded-lg text-xs font-light" type="number" placeholder="write Donation Amount">
+            <button id="donate-now2" class="btn bg-btn-bg">Donate Now</button>
+        </div>
+        </div>
+        <div class="flex lg:flex-row flex-col gap-4 p-5 bg-bg-card border border-card-border rounded-2xl">
+            <div class="lg:w-3/6"><img class="lg:h-96 w-full" src="assets/quota-protest.png" alt=""></div>
+        <div class="flex flex-col gap-3 lg:w-3/6">
+            <button class="btn  w-[10rem]"><img   src="assets/coin.png" alt=""><p id="donation-amount3">0</p><p>BDT</p></button>
+            <h1 class="text-xl">Aid for Injured in the Quota Movement</h1>
+            <p class="text-sm font-medium text-gray-500">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+            <input id="input-field3" class="h-12 p-2 border-2 border-card-border rounded-lg text-xs font-light" type="number" placeholder="write Donation Amount">
+            <button id="donate-now3" class="btn bg-btn-bg mt-1">Donate Now</button>
+        </div>
+        </div>
+        
+      </div>
+
+    </section>
+    <section id="history-section" class="container w-10/12 mx-auto mt-14 hidden">
+    <div class="flex flex-col gap-7">
+      <div id="transaction-history" class=" p-5 bg-bg-card border border-card-border rounded-2xl hidden ">
+       
+      </div>
+      <div id="transaction-history2" class=" p-5 bg-bg-card border border-card-border rounded-2xl hidden">
+      </div>
+      <div id="transaction-history3" class=" p-5 bg-bg-card border border-card-border rounded-2xl hidden">
+      </div>
+    </div>
+    </section>
+    <div class="bg-bg-navbar w-full mt-16 h-20"></div>
+    <script src="js/history.js"></script>
+    <script src="js/utilities.js"></script>
+</body>
+</html>
