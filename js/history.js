@@ -10,6 +10,7 @@ showHistoryBtn.addEventListener('click',function(){
     showDonateBtn.classList.add("bg-white", "border", "border-gray-300");
     document.getElementById('donate-section').classList.add('hidden');
     document.getElementById('history-section').classList.remove('hidden');
+    document.getElementById('bottom-line').classList.add("fixed", "bottom-0");
     
 })
 showDonateBtn.addEventListener('click', function(){
@@ -36,6 +37,14 @@ donateNowBtn.addEventListener('click', function(){
         const donationAmountNumber = parseFloat(donationAmount);
              const donationCardAmount = donationAmountNumber + donateMoneyNumber
         document.getElementById('donation-amount').innerText= donationCardAmount;
+        const modal = document.getElementById('modal');
+        modal.classList.remove('hidden');
+        const closeModal = document.getElementById('closeModal');
+        closeModal.onclick = function() {
+         modal.classList.add('hidden');
+     }
+
+
      }
       else{
         alert('Invalid data is found and stop the transaction')
@@ -44,6 +53,7 @@ donateNowBtn.addEventListener('click', function(){
       transactionForm.innerHTML=`<h1>${donateMoney} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h1>
        <p class="text-sm text-lighter-text mt-4">${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>`
        transactionForm.classList.remove('hidden');
+     
 })
 donateNowBtn2.addEventListener('click', function(){
     const donateMoney2= getInputField('input-field2');
@@ -59,8 +69,15 @@ donateNowBtn2.addEventListener('click', function(){
         const donationAmountNumber2 = parseFloat(donationAmount2);
              const donationCardAmount2 = donationAmountNumber2 + donateMoneyNumber2;
         document.getElementById('donation-amount2').innerText= donationCardAmount2;
-     }
-      else{
+        
+       const modal = document.getElementById('modal');
+       modal.classList.remove('hidden');
+       const closeModal = document.getElementById('closeModal');
+       closeModal.onclick = function() {
+        modal.classList.add('hidden');
+       }
+    }
+    else{
         alert('Invalid data is found and stop the transaction')
       }
       const transactionForm2 = document.getElementById('transaction-history2');
@@ -82,8 +99,13 @@ donateNowBtn3.addEventListener('click', function(){
         const donationAmountNumber3= parseFloat(donationAmount3);
              const donationCardAmount3 = donationAmountNumber3 + donateMoneyNumber3;
         document.getElementById('donation-amount3').innerText= donationCardAmount3;
-     }
-      else{
+        const modal = document.getElementById('modal');
+       modal.classList.remove('hidden');
+       const closeModal = document.getElementById('closeModal');
+       closeModal.onclick = function() {
+        modal.classList.add('hidden');
+       }
+    } else{
         alert('Invalid data is found and stop the transaction')
       }
       const transactionForm3 = document.getElementById('transaction-history3');

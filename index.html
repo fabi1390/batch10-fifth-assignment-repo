@@ -50,7 +50,7 @@
     </header>
     <div  class="text-center space-x-5 lg:mt-40 mt-64"><button id="show-donate-btn" class="btn bg-btn-bg">Donation</button><button 
      id="show-history-btn" class="btn border border-gray-300 bg-white">History</button></div>
-    <section id="donate-section" class="container w-10/12 mx-auto mt-14 ">
+    <section id="donate-section" class="container w-10/12 mx-auto mt-14 mb-8 ">
       <div class="flex  flex-col   gap-7">
         <div class="flex lg:flex-row flex-col gap-4 p-5 bg-bg-card border border-card-border rounded-2xl ">
             <div class="lg:w-3/6"><img src="assets/noakhali.png" alt=""></div>
@@ -93,11 +93,20 @@
       </div>
       <div id="transaction-history2" class=" p-5 bg-bg-card border border-card-border rounded-2xl hidden">
       </div>
-      <div id="transaction-history3" class=" p-5 bg-bg-card border border-card-border rounded-2xl hidden">
+      <div id="transaction-history3" class=" p-5 bg-bg-card border border-card-border rounded-2xl hidden mb-36">
       </div>
     </div>
     </section>
-    <div class="bg-bg-navbar w-full mt-16 h-20"></div>
+    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+      <div class="bg-white rounded-lg p-6 w-sm text-center space-y-3">
+          <h2 class="text-2xl font-semibold">Congratulations!</h2>
+          <img class="ml-[7.5rem]" src="assets/coin.png" alt="">
+          <p class="text-base text-lighter-text">You Have Donated for Humankind.</p>
+          <button id="closeModal" class=" px-4 py-2 btn">Close Confirmation</button>
+      </div>
+  </div>
+
+    <div id="bottom-line" class="bg-bg-navbar w-full mt-16 h-20"></div>
     <script src="js/history.js"></script>
     <script src="js/utilities.js"></script>
 </body>
